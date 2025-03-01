@@ -1,0 +1,258 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+  line-height: 1.6;
+}
+
+/* Header */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #f1f1f2;
+}
+
+.tiktok-logo {
+  height: 28px;
+}
+
+.balance-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.survey-counter {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.balance {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-weight: 600;
+  min-width: 80px;
+  text-align: center;
+}
+
+.withdraw-btn {
+  background-color: #fe2c55;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 80px;
+}
+
+.withdraw-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #e9e9e9;
+  margin-top: 4px;
+}
+
+.progress {
+  width: 10%;
+  height: 100%;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+/* Survey Container */
+.survey-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.survey-title {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.survey-title h1 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.survey-subtitle {
+  text-align: center;
+  color: #888;
+  margin-bottom: 30px;
+}
+
+/* Option Items */
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.option-item.selected {
+  border-color: #fe2c55;
+}
+
+.emoji {
+  font-size: 28px;
+  margin-right: 15px;
+}
+
+.option-text {
+  flex-grow: 1;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+.option-item.selected .checkbox {
+  background-color: #fe2c55;
+  border-color: #fe2c55;
+  position: relative;
+}
+
+.option-item.selected .checkbox::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 3px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Continue Button */
+.continue-btn {
+  width: 100%;
+  background-color: #fe2c55;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.continue-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Bonus Section */
+.bonus-container {
+  background-color: #e6f7ef;
+  color: #36b37e;
+  text-align: center;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* Terms */
+.terms {
+  color: #888;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Completion Message */
+#completion-message {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.completion-content {
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.completion-content h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.completion-content p {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.withdraw-btn-large {
+  background-color: #fe2c55;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+  .survey-title h1 {
+    font-size: 20px;
+  }
+  
+  .option-item {
+    padding: 12px;
+  }
+  
+  .emoji {
+    font-size: 24px;
+  }
+  
+  .balance-container {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  
+  .survey-counter {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 5px;
+  }
+}

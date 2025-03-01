@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TikTok Pesquisa</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="app-header">
+    <div class="logo">
+      <img src="images/tiktok.png" alt="TikTok" class="tiktok-logo">
+    </div>    
+    <div class="balance-container">
+      <div class="survey-counter">
+        Pesquisa <span id="currentSurvey">0</span>/<span id="totalSurveys">10</span>
+      </div>      
+      <div class="balance">R$ 0</div>
+      <button class="withdraw-btn" disabled>SACAR</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="progress-bar">
+      <div class="progress"></div>
+    </div>
+
+    <div class="survey-container">
+      <div id="survey-content">
+        <div class="survey-title">
+          <h1 id="question-title">Carregando pergunta...</h1>
+        </div>
+        
+        <p class="survey-subtitle">Selecione uma ou mais opções para continuar</p>
+
+        <div class="options-container" id="options-container"></div>
+
+        <button class="continue-btn" id="continue-btn" disabled>Continuar</button>
+        
+        <div class="bonus-container">
+          <p>Concorra a um bônus adicional</p>
+        </div>
+
+        <div class="terms">
+          <p>Ao participar das atividades de recompensa, você concorda com nossos termos.</p>
+        </div>
+      </div>
+      
+      <div id="completion-message" style="display: none;">
+        <div class="completion-content">
+          <h2>Parabéns!</h2>
+          <p>Você completou todas as pesquisas.</p>
+          <p>Agora você pode sacar seu saldo.</p>
+          <button class="withdraw-btn-large">SACAR R$ <span id="total-balance">0</span></button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
